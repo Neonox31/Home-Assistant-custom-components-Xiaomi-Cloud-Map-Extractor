@@ -19,5 +19,9 @@ class DreameVacuum(XiaomiCloudVacuumV2):
                    texts: Texts,
                    sizes: Sizes,
                    image_config: ImageConfig) -> MapData:
+        # with open('/config/map_data_dreame.vacuum.p2029.b64', 'rb') as f:
+        #     raw_map_file = f.read()
+        #     raw_map_string = raw_map_file.decode()
+        #     return MapDataParserDreame.decode_map(raw_map_string, colors, drawables, texts, sizes, image_config)
         raw_map_string = raw_map.decode()
         return MapDataParserDreame.decode_map(raw_map_string, colors, drawables, texts, sizes, image_config)
